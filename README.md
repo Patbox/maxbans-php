@@ -5,7 +5,7 @@ maxbans-php
 PHP listings script for MaxBans
 
 index.php is just example of use.
-To add it too yours website just include it.
+You can edit how much you want.
 
 Demo: https://crafters.ga/ban/
 
