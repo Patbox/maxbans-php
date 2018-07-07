@@ -1,6 +1,3 @@
-#logo {
-	margin-left:2%;	
-}
 body {
 	background: white;
 	background-size: cover;
@@ -35,16 +32,6 @@ li:hover {
 }
 html,body {
     overflow-x: hidden;
-}
-#server-status {
-	font-family:'Open Sans';
-	font-size:1em;
-}
-#green {
-	color:green;
-}
-th, td, tr {
-    border-bottom: 1px solid #ddd;
 }
 .hoverable:hover {
 	background-image:white.png;
