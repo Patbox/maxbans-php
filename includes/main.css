@@ -1,0 +1,10 @@
+.head {
+	max-height: 32px;
+	max-width: 32px;
+	margin-bottom:5px;
+	margin-right:5px;
+	border-radius:2px;
+}
+.bantable {
+    border-bottom: 1px solid #ddd;
+}
