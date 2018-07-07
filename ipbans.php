@@ -1,27 +1,27 @@
-<head><link rel="stylesheet" href="includes/tablestyle.css"></head>
+<head><link rel="stylesheet" href="includes/main.css"></head>
 <?php
    // <<-----------------Database Connection------------>> //
-   require 'includes/data/database.php';
+   require 'includes/database.php';
    $sql = 'SELECT ip, reason, banner, time, expires FROM ipbans ORDER BY time DESC LIMIT 20';
    $retval = $conn->query($sql);
    ?>
 <body>
             <table class="col-sm-12 table-condensed">
             <thead>
-               <tr>
+               <tr class='bantable'>
                   <th>
                      <center>IP Address</center>
                   </th>
-                  <th>
+                  <th class='bantable'>
                      <center>Banned By</center>
                   </th>
-                  <th>
+                  <th class='bantable'>
                      <center>Reason</center>
                   </th>
-                  <th>
+                  <th class='bantable'>
                      <center>Banned On</center>
                   </th>
-                  <th>
+                  <th class='bantable'>
                      <center>Banned Until</center>
                   </th>
                </tr>
@@ -40,8 +40,8 @@
                   $expiresConvert = $expiresEpoch / 1000;
                   $expiresResult = date('F j, Y, g:i a', $expiresConvert);
                   ?>
-               <tr>
-                  <td>
+               <tr class='bantable'>
+                  <td class='bantable'>
                      <?php
                         $ip = $row['ip'];
                         
@@ -56,10 +56,10 @@
                         echo $numbers;
                         ?>
                   </td>
-                  <td><?php echo "<img src='https://cravatar.eu/avatar/" . $row['banner'] . "/25'  style='margin-bottom:5px;margin-right:5px;border-radius:2px;' />" . $row['banner'];?></td>
-				  <td style="width: 30%;"><center><?php echo $row['reason'];?></center></td>
-				  <td><?php echo $timeResult;?></td>
-				  <td><center><?php if($row['expires'] == 0) {
+                  <td class='bantable'><?php echo "<img src='https://cravatar.eu/avatar/" . $row['banner'] . "/25'  style='margin-bottom:5px;margin-right:5px;border-radius:2px;' />" . $row['banner'];?></td>
+				  <td class='bantable' style="width: 30%;"><center><?php echo $row['reason'];?></center></td>
+				  <td class='bantable'><?php echo $timeResult;?></td>
+				  <td class='bantable'><center><?php if($row['expires'] == 0) {
 					 echo 'Permanent Ban';
 					 } else {
 					 echo $expiresResult; }?></center></td>

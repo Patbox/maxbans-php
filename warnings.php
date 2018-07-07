@@ -1,27 +1,27 @@
-<head><link rel="stylesheet" href="includes/tablestyle.css"></head>
+<head><link rel="stylesheet" href="includes/main.css"></head>
 <?php
    // <<-----------------Database Connection------------>> //
-   require 'includes/data/database.php';
+   require 'includes/database.php';
    $sql = 'SELECT name, reason, banner, expires FROM warnings ORDER BY expires DESC LIMIT 20';
    $retval = $conn->query($sql);
    ?>
 <body>
       <table class="col-sm-12 table-condensed">
       <thead>
-         <tr>
-            <th>
+         <tr class='bantable'>
+            <th class='bantable'>
                <center>Name</center>
             </th>
-            <th>
+            <th class='bantable'>
                <center>Warned By</center>
             </th>
-            <th>
+            <th class='bantable'>
                <center>Reason</center>
             </th>
 	<th>
                <center>Warned on</center>
             </th>
-            <th>
+            <th class='bantable'>
                <center>Warned Until</center>
             </th>
          </tr>
@@ -36,12 +36,12 @@
             $expiresConvert = $expiresEpoch / 1000;
             $expiresResult = date('F j, Y, g:i a', $expiresConvert);
             ?>
-         <tr>
-				  <td><?php echo "<img src='https://cravatar.eu/avatar/" . $row['name'] . "/25' style='margin-bottom:5px;margin-right:5px;border-radius:2px;' />" . $row['name'];?></td>
-				  <td><?php echo "<img src='https://cravatar.eu/avatar/" . $row['banner'] . "/25'  style='margin-bottom:5px;margin-right:5px;border-radius:2px;' />" . $row['banner'];?></td>
-				  <td style="width: 30%;"><center><?php echo $row['reason'];?></center></td>
-				  <td><?php echo $timeResult;?></td>
-				  <td><center><?php if($row['expires'] == 0) {
+         <tr  class='bantable'>
+				  <td class='bantable'><?php echo "<img src='https://cravatar.eu/avatar/" . $row['name'] . "/256' class='head' />" . $row['name'];?></td>
+				  <td class='bantable'><?php echo "<img src='https://cravatar.eu/avatar/" . $row['banner'] . "/256'  class='head' />" . $row['banner'];?></td>
+				  <td class='bantable' style="width: 30%;"><center><?php echo $row['reason'];?></center></td>
+				  <td class='bantable'><?php echo $timeResult;?></td>
+				  <td class='bantable'><center><?php if($row['expires'] == 0) {
 					 echo 'Permanent Warning';
 					 } else {
 					 echo $expiresResult; }?></center></td>
