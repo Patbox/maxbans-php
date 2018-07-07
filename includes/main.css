@@ -2,3 +2,6 @@
 	max-height: 64px;
 	max-width: 64px
 }
+.bantable {
+    border-bottom: 1px solid #ddd;
+}
