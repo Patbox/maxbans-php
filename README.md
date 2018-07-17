@@ -9,4 +9,5 @@ You can edit how much you want.
 
 Demo: https://crafters.ga/ban/
 
+Original: https://github.com/Yive/maxbans-php
 Demo (old): http://maxbans.yive.me/
