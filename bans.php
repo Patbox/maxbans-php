@@ -41,8 +41,8 @@
 				  $expiresResult = date('F j, Y, g:i a', $expiresConvert);
 				  ?>
 			   <tr class='bantable'>
-				  <td class='bantable'><?php echo "<img src='https://minotar.net/helm/user/" . $row['name'] . "/256' class='head' />" . $row['name'];?></td>
-				  <td class='bantable'><?php echo "<img src='https://minotar.net/helm/user/" . $row['banner'] . "/256'  class='head' />" . $row['banner'];?></td>
+				  <td class='bantable'><?php echo "<img src='https://minotar.net/helm/" . $row['name'] . "/256' class='head' />" . $row['name'];?></td>
+				  <td class='bantable'><?php echo "<img src='https://minotar.net/helm/" . $row['banner'] . "/256'  class='head' />" . $row['banner'];?></td>
 				  <td class='bantable' style="width: 30%;"><center><?php echo $row['reason'];?></center></td>
 				  <td class='bantable'><?php echo $timeResult;?></td>
 				  <td class='bantable'><center><?php if($row['expires'] == 0) {
