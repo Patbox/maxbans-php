@@ -56,7 +56,7 @@
                         echo $numbers;
                         ?>
                   </td>
-				  <td class='bantable'><?php echo "<img src='https://cravatar.eu/avatar/" . $row['banner'] . "/256'  class='head' />" . $row['banner'];?></td>
+				  <td class='bantable'><?php echo "<img src='https://minotar.net/helm/user/" . $row['banner'] . "/256'  class='head' />" . $row['banner'];?></td>
 				  <td class='bantable' style="width: 30%;"><center><?php echo $row['reason'];?></center></td>
 				  <td class='bantable'><?php echo $timeResult;?></td>
 				  <td class='bantable'><center><?php if($row['expires'] == 0) {
